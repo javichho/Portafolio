@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&family=Playfair+Display+SC:ital@1&family=Roboto+Slab&family=Signika+Negative:wght@300&display=swap');
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100%;
+}
+/*NAV*/
+.menu-movil{
+    display: none;
+    /*style*/
+       position: absolute;
+       background-color: #0f3b4c;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 34px;
+        transition: 500ms ease-in;
+        transform: translateX(-100%);
+}
+.navbar{
+    background-color: #012E40;
+    padding: 15px;
+    box-shadow: -3px -2px 23px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -3px -2px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px -2px 23px 0px rgba(0,0,0,0.75); 
+}
+.brand{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 300ms ease-in;
+    text-shadow: 3px 2px 3px #000;
+}
+/*Links*/
+.brand:hover{
+     letter-spacing: 2px;
+    color:#8d1636;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+/*LOGO TEXT*/
+.logo-text{
+     color: #fff;
+    font-size: 27px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    text-shadow: 3px 2px 3px #000;
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.logo-text:hover {
+  transform: rotate(360deg);
+}
+
+.color-j{
+    color: rgb(157, 47, 47);
+}
+.color-a{
+    color: lightcoral;
+}
+/*============= MENU MOVIL =========*/
+.icon{
+    display: none;
+    cursor: pointer;
+}
+.icon i{
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: 2px 3px 4px #000;
+}
+/*========Menu Responsive========*/
+@media screen and (max-width: 870px){
+    .navbar-brand{
+        letter-spacing: 0px;
+    }
+    /*Activamos icon*/
+    .icon{
+        display: block;
+    }
+    /*Desactivamos Menu Desktop*/
+    .menu{
+     display: none;
+    }
+    .menu-movil{
+       display: flex;
+    }
+    .menu-movil.active{
+        margin-top: -5px;
+        transition: 300ms ease-in;
+        transform: translateX(0);
+    }
+    .navbar-brand{
+        font-size: 25px;
+    }
+    .icon.delete{
+        font-size: 30px;
+        color: #fff;
+        font-weight: 500;
+        text-shadow: 2px 3px 4px #000;
+    }
+} 
+
+
+
+
+/*=================== SECCION INICIO ===============*/
+
+#inicio{
+    background-color: rgb(22,53,65);
+     height: 100%;
+     padding: 100px 0;
+}
+/*RETRATO*/
+.card{
+    margin-top: 10px;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 1000ms ease-in;
+}
+.card.active{
+    transition: 1000ms;
+    transform: translateX(0);
+    opacity: 5;
+}
+/*FLEX*/
+.flex-inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*INFORMACION*/
+.inicio-informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.titulo-inicio{
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+    color: #f3f3f3;
+    text-shadow: 2px 2px 3px #000;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 1000ms ease-in;
+}
+.titulo-inicio.active{
+    transform: translateX(0);
+    opacity: 5;
+}
+/*span*/
+.nombre-span{
+    color: rgb(167,14,55);
+    text-shadow: 2px 3px 5px #000;
+    font-weight: 700;
+}
+.parrafo-inicio{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 1000ms ease-in;
+}
+.parrafo-inicio.active{
+    transform: translateX(0);
+    opacity: 5;
+}
+
+/*==== DESKTOP (inicio) ======*/
+@media screen and (min-width: 870px){
+    .inicio{
+    
+        width: 100%;
+        padding:40px 0px;
+        background-color: none;
+        background-image: linear-gradient(
+         0deg,
+         rgba(0,0,0,0.7),
+         rgba(0,0,0,0.7)
+        )
+        ,url(../img/programacion.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+    }
+    .flex-inicio{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .inicio-informacion{
+        width: 50%;
+        margin-top: 30px;
+    }
+    .titulo-inicio{
+    font-size: 30px;
+    cursor: default;
+      }
+      .parrafo-inicio{
+        font-weight: 600;
+        cursor: default;
+        width: 100%;
+        margin-top: 30px;
+      }
+}
+
+
+
+
+
+
+
+
+/*======================= SECCION: SOBRE MI ============================*/
+
+#about{
+     background-image: linear-gradient(
+         0deg,
+         rgba(0,0,0,0.7),
+         rgba(0,0,0,0.7)
+        )
+        ,url(../img/degradado.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+  height: 100%;
+  padding: 100px 0;
+}
+/*titulo principal about*/
+.titulo-about{
+    color: #8d1636;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 3px #000;
+    cursor: default;
+    text-transform: uppercase;
+    border: 3px solid #8d1636;
+    border-radius: 8px;
+    padding: 5px;
+}
+/*row (config en el "responsive")*/
+.info-titulo {
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px #eae5e5;
+    color: #761919;
+}
+.parrafo-about{
+    padding: 10px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.retrato-about{
+    max-width: 300px;
+    height: 400px;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 900ms ease-in;
+}
+.retrato-about.active{
+    opacity: 5;
+    transform: translateY(0);
+}
+.informacion-about{
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 900ms ease-in;
+}
+.informacion-about.active{
+    opacity: 5;
+    transform: translateY(0);
+}
+
+
+
+/*ABOUT (RESPONSIVE)*/
+
+
+/*MOVIL*/
+@media (max-width: 869px) { 
+       .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+    }
+    .parrafo-about{
+        max-width: 600px;
+    }    
+ }
+
+/*DESKTOP*/
+@media (max-width: 1400px) { 
+    .row{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+    }
+    .parrafo-about{
+        color: #fff;
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
