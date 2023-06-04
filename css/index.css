@@ -126,7 +126,7 @@ body{
 #inicio{
     background-color: rgb(22,53,65);
      height: 100%;
-     padding: 100px 0;
+     padding: 80px 0;
 }
 /*RETRATO*/
 .card{
@@ -195,10 +195,9 @@ body{
 
 /*==== DESKTOP (inicio) ======*/
 @media screen and (min-width: 870px){
-    .inicio{
-    
+    #inicio{
+        padding: 90px 0;
         width: 100%;
-        padding:40px 0px;
         background-color: none;
         background-image: linear-gradient(
          0deg,
@@ -231,6 +230,12 @@ body{
         cursor: default;
         width: 100%;
         margin-top: 30px;
+      }
+      .card{
+        margin-bottom: 100px;
+      }
+      .inicio-informacion{
+        margin-bottom: 100px;
       }
 }
 
@@ -332,7 +337,7 @@ body{
         gap: 15px;
     }
     .parrafo-about{
-        color: #fff;
+        color: #ffffff;
     }
  }
 
