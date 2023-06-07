@@ -44,12 +44,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
 /*======== ANIMACION DE CARGAR (S/ABOUT) =========*/
-
-
 window.addEventListener('scroll', function() {
   //selectores elementos 
  var imagenAbout = document.querySelector('.retrato-about');
  var informacionAbout = document.querySelector('.informacion-about');
+ var tituloAbout = document.querySelector('.titulo-about')
 
 
 
@@ -62,6 +61,7 @@ window.addEventListener('scroll', function() {
   if (scrollPosition > (seccionOffset - (windowHeight / 2))) {
     imagenAbout.classList.add('active');
     informacionAbout.classList.add('active');
+    tituloAbout.classList.add('active');
   }
 });
 

@@ -123,10 +123,9 @@ body{
 
 /*=================== SECCION INICIO ===============*/
 
-#inicio{
+.seccion-principal{
     background-color: rgb(22,53,65);
      height: 100%;
-     padding: 80px 0;
 }
 /*RETRATO*/
 .card{
@@ -147,6 +146,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 30px 0;
 }
 /*INFORMACION*/
 .inicio-informacion{
@@ -195,8 +195,8 @@ body{
 
 /*==== DESKTOP (inicio) ======*/
 @media screen and (min-width: 870px){
-    #inicio{
-        padding: 90px 0;
+    .seccion-principal{
+        height: 100%;
         width: 100%;
         background-color: none;
         background-image: linear-gradient(
@@ -208,6 +208,9 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .flex-inicio{
         display: flex;
@@ -215,7 +218,7 @@ body{
         justify-content: space-around;
         align-items: center;
         width: 100%;
-        margin-top: 30px;
+        height: 100vh;
     }
     .inicio-informacion{
         width: 50%;
@@ -258,8 +261,8 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;
-  height: 100%;
-  padding: 100px 0;
+        height: 100%;
+        padding: 100px 0;
 }
 /*titulo principal about*/
 .titulo-about{
@@ -274,6 +277,14 @@ body{
     border: 3px solid #8d1636;
     border-radius: 8px;
     padding: 5px;
+    /*animacion*/
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 900ms ease-in;
+}
+.titulo-about.active{
+    opacity: 5;
+    transform: translateY(0);
 }
 /*row (config en el "responsive")*/
 .info-titulo {
@@ -289,8 +300,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .retrato-about{
-    max-width: 300px;
-    height: 400px;
+    width: 320px;
     opacity: 0;
     transform: translateY(200px);
     transition: 900ms ease-in;
@@ -300,6 +310,7 @@ body{
     transform: translateY(0);
 }
 .informacion-about{
+    width: 700px;
     opacity: 0;
     transform: translateY(200px);
     transition: 900ms ease-in;
